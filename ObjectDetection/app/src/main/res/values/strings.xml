@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Object Detector</string>
+    <string name="title_home">Object Detect</string>
+    <string name="title_dashboard">List</string>
+    <string name="title_notifications">About</string>
+
+
+</resources>
