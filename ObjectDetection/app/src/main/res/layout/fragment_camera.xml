@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="55dp">
 
+
     </FrameLayout>
 
     <Button
@@ -22,5 +23,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-130dp"
         android:background="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/tv_info_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_capture"
+        android:layout_centerHorizontal="true"
+        android:text="" />
 
 </RelativeLayout>

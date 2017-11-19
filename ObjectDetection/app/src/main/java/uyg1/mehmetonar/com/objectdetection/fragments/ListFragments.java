@@ -1,32 +1,24 @@
 package uyg1.mehmetonar.com.objectdetection.fragments;
 
 import android.content.Context;
-import android.hardware.Camera;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import uyg1.mehmetonar.com.objectdetection.R;
-import uyg1.mehmetonar.com.objectdetection.cameratools.CameraPreview;
 
 
-public class ListFragments extends Fragment{
+public class ListFragments extends Fragment {
 
-    public static final int MEDIA_TYPE_IMAGE = 1;
-    public static final int MEDIA_TYPE_VIDEO = 2;
-
-    private Button btnCapture;
-    private Context mContext;
-    private Camera mCamera;
-    private CameraPreview mPreview;
-
+    Context mContext;
 
     public ListFragments(Context context) {
-        this.mContext=context;
+        this.mContext = context;
     }
+
 
 
 
@@ -34,22 +26,14 @@ public class ListFragments extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
-        View view = inflater.inflate(R.layout.fragment_camera, container, false);
-
-
-
-        return view;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_list_fragments, container, false);
     }
-
-
 
 
 }

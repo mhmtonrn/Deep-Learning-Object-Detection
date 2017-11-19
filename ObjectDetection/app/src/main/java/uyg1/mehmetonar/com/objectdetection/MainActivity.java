@@ -3,7 +3,6 @@ package uyg1.mehmetonar.com.objectdetection;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -14,7 +13,7 @@ import uyg1.mehmetonar.com.objectdetection.fragments.ListFragments;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    android.support.v4.app.FragmentTransaction fragmentTransaction;
 
 
     @Override
@@ -26,24 +25,26 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
 
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+       /* BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);*/
+
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container,new CameraFragment(getApplicationContext())).commit();
 
     }
 
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+   /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     fragmentTransaction.replace(R.id.container,new CameraFragment(getApplicationContext())).commit();
+
                     return true;
                 case R.id.navigation_dashboard:
                     fragmentTransaction.replace(R.id.container,new ListFragments(getApplicationContext())).commit();
@@ -56,5 +57,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     };
+*/
+
 
 }
