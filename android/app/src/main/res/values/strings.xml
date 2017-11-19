@@ -1,0 +1,11 @@
+<resources>
+    <string name="clarifai_api_key">c1785c40e4dd4fabaa6764cae27eebfe</string>
+
+    <string name="app_name">Object Detector</string>
+
+    <string name="error_external_storage_permission_not_granted">You must accept this permission so we can upload your images!</string>
+
+    <string name="error_while_contacting_api">Error while contacting Clarifai API</string>
+    <string name="no_results_from_api">API did not return any results</string>
+
+</resources>
