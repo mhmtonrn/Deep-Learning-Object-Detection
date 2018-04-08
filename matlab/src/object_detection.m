@@ -11,5 +11,6 @@ while true
        
     image(picture);     % Show the picture
     title(char(label)); % Show the label
-    drawnow;   
+    drawnow;  
+    
 end
